@@ -1,0 +1,20 @@
+vim.opt.swapfile = false
+vim.opt.number = true
+vim.opt.tabstop = 4
+vim.opt.expandtab =  true
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.shiftround = true
+vim.opt.textwidth = 0
+vim.opt.wrap = false
+vim.opt.wrap = linebreak
+vim.opt.list = true
+vim.opt.listchars = "trail:·,tab:»-"
+vim.opt.mouse = ""
+vim.opt.encoding = "utf-8"
+vim.opt.incsearch = true
+vim.opt.hlsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.startofline = false
+
