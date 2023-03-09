@@ -47,6 +47,8 @@ return packer.startup(function(use)
     config = function()
         require("gitsigns").setup()
     end }
+  use { "kyazdani42/nvim-tree.lua" }
+
 
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer"
@@ -54,7 +56,15 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline"
   use "hrsh7th/cmp-nvim-lua"
   use "saadparwaiz1/cmp_luasnip"
+  use "hrsh7th/cmp-nvim-lsp"
+  use { "L3MON4D3/LuaSnip"} --snippet engine required for LSP
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
+  use { "neovim/nvim-lspconfig"} -- enable LSP
+  use { "williamboman/mason.nvim"} -- simple to use language server installer
+  use { "williamboman/mason-lspconfig.nvim"}
+  use { "jose-elias-alvarez/null-ls.nvim"} -- for formatters and linters
+  use { "RRethy/vim-illuminate"}
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
