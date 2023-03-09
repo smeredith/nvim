@@ -47,6 +47,14 @@ return packer.startup(function(use)
     config = function()
         require("gitsigns").setup()
     end }
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-cmdline"
+  use "saadparwaiz1/cmp_luasnip"
+  use "L3MON4D3/LuaSnip"
+
+
 
 
 
