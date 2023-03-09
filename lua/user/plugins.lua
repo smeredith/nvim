@@ -30,13 +30,13 @@ if not status_ok then
 end
 
 -- Have packer use a popup window
--- packer.init({
---     display = {
---         open_fn = function()
---             return require("packer.util").float({ border = "rounded" })
---         end,
---     },
--- })
+packer.init({
+    display = {
+        open_fn = function()
+            return require("packer.util").float({ border = "rounded" })
+        end,
+    },
+})
 
 -- Install your plugins here
 return packer.startup(function(use)
@@ -47,15 +47,13 @@ return packer.startup(function(use)
     config = function()
         require("gitsigns").setup()
     end }
+
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-cmdline"
+  use "hrsh7th/cmp-nvim-lua"
   use "saadparwaiz1/cmp_luasnip"
-  use "L3MON4D3/LuaSnip"
-
-
-
 
 
     -- Automatically set up your configuration after cloning packer.nvim
