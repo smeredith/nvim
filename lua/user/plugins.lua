@@ -43,16 +43,13 @@ return packer.startup(function(use)
   use { "wbthomason/packer.nvim" } -- Have packer manage itself
   use { "nvim-telescope/telescope.nvim", tag = "0.1.1", requires = { {"nvim-lua/plenary.nvim"} } }
   use { "folke/which-key.nvim" }
-  use { "lewis6991/gitsigns.nvim",
-    config = function()
-        require("gitsigns").setup()
-    end }
+  use { "lewis6991/gitsigns.nvim" }
   use { "kyazdani42/nvim-tree.lua" }
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
-  use "jeffkreeftmeijer/vim-dim" 
+  use "jeffkreeftmeijer/vim-dim"
 
   -- cmp
   use "hrsh7th/nvim-cmp"
@@ -72,9 +69,12 @@ return packer.startup(function(use)
   use { "jose-elias-alvarez/null-ls.nvim"} -- for formatters and linters
   use { "RRethy/vim-illuminate"}
 
-    -- Automatically set up your configuration after cloning packer.nvim
-    -- Put this at the end after all plugins
-    if PACKER_BOOTSTRAP then
-        require("packer").sync()
-    end
+  -- Treesitter
+  use { "nvim-treesitter/nvim-treesitter" }
+
+  -- Automatically set up your configuration after cloning packer.nvim
+  -- Put this at the end after all plugins
+  if PACKER_BOOTSTRAP then
+      require("packer").sync()
+  end
 end)

@@ -7,7 +7,6 @@ vim.opt.shiftwidth = 4
 vim.opt.shiftround = true
 vim.opt.textwidth = 0
 vim.opt.wrap = false
-vim.opt.wrap = linebreak
 vim.opt.list = true
 vim.opt.listchars = "trail:·,tab:»-"
 vim.opt.mouse = ""
