@@ -40,41 +40,43 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-  use { "wbthomason/packer.nvim" } -- Have packer manage itself
-  use { "nvim-telescope/telescope.nvim", tag = "0.1.1", requires = { {"nvim-lua/plenary.nvim"} } }
-  use { "folke/which-key.nvim" }
-  use { "lewis6991/gitsigns.nvim" }
-  use { "kyazdani42/nvim-tree.lua" }
+    use { "wbthomason/packer.nvim" } -- Have packer manage itself
+    use { "nvim-telescope/telescope.nvim", tag = "0.1.1", requires = { {"nvim-lua/plenary.nvim"} } }
+    use { "folke/which-key.nvim" }
+    use { "lewis6991/gitsigns.nvim" }
+    use { "kyazdani42/nvim-tree.lua" }
+    use { "numToStr/Comment.nvim" }
+    use { "JoosepAlviste/nvim-ts-context-commentstring" }
 
-  -- Colorschemes
-  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
-  use "jeffkreeftmeijer/vim-dim"
+    -- Colorschemes
+    use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+    use "lunarvim/darkplus.nvim"
+    use "jeffkreeftmeijer/vim-dim"
 
-  -- cmp
-  use "hrsh7th/nvim-cmp"
-  use "hrsh7th/cmp-buffer"
-  use "hrsh7th/cmp-path"
-  use "hrsh7th/cmp-cmdline"
-  use "hrsh7th/cmp-nvim-lua"
-  use "saadparwaiz1/cmp_luasnip"
-  use "hrsh7th/cmp-nvim-lsp"
-  use { "L3MON4D3/LuaSnip"} --snippet engine required for LSP
-  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+    -- cmp
+    use "hrsh7th/nvim-cmp"
+    use "hrsh7th/cmp-buffer"
+    use "hrsh7th/cmp-path"
+    use "hrsh7th/cmp-cmdline"
+    use "hrsh7th/cmp-nvim-lua"
+    use "saadparwaiz1/cmp_luasnip"
+    use "hrsh7th/cmp-nvim-lsp"
+    use { "L3MON4D3/LuaSnip"} --snippet engine required for LSP
+    use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
-  -- LSP
-  use { "neovim/nvim-lspconfig"} -- enable LSP
-  use { "williamboman/mason.nvim"} -- simple to use language server installer
-  use { "williamboman/mason-lspconfig.nvim"}
-  use { "jose-elias-alvarez/null-ls.nvim"} -- for formatters and linters
-  use { "RRethy/vim-illuminate"}
+    -- LSP
+    use { "neovim/nvim-lspconfig"} -- enable LSP
+    use { "williamboman/mason.nvim"} -- simple to use language server installer
+    use { "williamboman/mason-lspconfig.nvim"}
+    use { "jose-elias-alvarez/null-ls.nvim"} -- for formatters and linters
+    use { "RRethy/vim-illuminate"}
 
-  -- Treesitter
-  use { "nvim-treesitter/nvim-treesitter" }
+    -- Treesitter
+    use { "nvim-treesitter/nvim-treesitter" }
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if PACKER_BOOTSTRAP then
-      require("packer").sync()
-  end
+    -- Automatically set up your configuration after cloning packer.nvim
+    -- Put this at the end after all plugins
+    if PACKER_BOOTSTRAP then
+        require("packer").sync()
+    end
 end)
