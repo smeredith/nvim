@@ -49,7 +49,12 @@ return packer.startup(function(use)
     end }
   use { "kyazdani42/nvim-tree.lua" }
 
+  -- Colorschemes
+  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  use "lunarvim/darkplus.nvim"
+  use "jeffkreeftmeijer/vim-dim" 
 
+  -- cmp
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
@@ -60,6 +65,7 @@ return packer.startup(function(use)
   use { "L3MON4D3/LuaSnip"} --snippet engine required for LSP
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
+  -- LSP
   use { "neovim/nvim-lspconfig"} -- enable LSP
   use { "williamboman/mason.nvim"} -- simple to use language server installer
   use { "williamboman/mason-lspconfig.nvim"}
