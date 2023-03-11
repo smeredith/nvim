@@ -76,6 +76,12 @@ return packer.startup(function(use)
     -- Treesitter
     use { "nvim-treesitter/nvim-treesitter" }
 
+    -- Debugging
+    use { "mfussenegger/nvim-dap" }
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use { "theHamsta/nvim-dap-virtual-text" }
+
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
