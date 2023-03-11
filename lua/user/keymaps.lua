@@ -19,7 +19,10 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal --
+-- Toggle line wrap.
 keymap("n", "<leader>tw", ":set wrap!<CR>", opts)
+-- Copy full path and filename to clipboard.
+keymap("n", "<leader>yp", ":let @+=@%<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
