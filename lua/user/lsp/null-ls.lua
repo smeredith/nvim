@@ -11,6 +11,6 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
     debug = false,
     sources = {
-    null_ls.builtins.formatting.clang_format,
+    --null_ls.builtins.formatting.clang_format,
  },
 })
