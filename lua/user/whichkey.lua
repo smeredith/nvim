@@ -153,6 +153,8 @@ local leaderMappings = {
     C = { "<cmd>Telescope commands<cr>", "Commands" },
     d = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
     f = { "<cmd>Telescope find_files<cr>", "Find file" },
+    g = { "<cmd>lua require('telescope.builtin').grep_string({search = vim.fn.input('Rg> ')})<cr>",
+          "Grep" },
     h = { "<cmd>Telescope help_tags<cr>", "Find help" },
     H = { "<cmd>Telescope highlights<cr>", "Find highlight groups" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
