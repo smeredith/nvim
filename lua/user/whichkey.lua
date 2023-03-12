@@ -159,13 +159,13 @@ local leaderMappings = {
     m = { "<cmd>Telescope marks<cr>", "Marks" },
     M = { "<cmd>Telescope man_pages<cr>", "Man pages" },
     l = { "<cmd>Telescope resume<cr>", "Resume last search" },
-    p = {
-        "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
-        "Colorscheme with Preview",
-    },
+    p = { "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
+          "Colorscheme with Preview", },
     r = { "<cmd>Telescope oldfiles<cr>", "Open recent file" },
     R = { "<cmd>Telescope registers<cr>", "Registers" },
     t = { "<cmd>Telescope live_grep<cr>", "Text" },
+    v = { "<cmd>lua require('telescope.builtin').find_files({cwd = '~/.config/nvim'})<cr>",
+          "Nvim config files" },
     w = { "<cmd>Telescope grep_string<cr>", "Word under cursor" },
   },
   t = {
