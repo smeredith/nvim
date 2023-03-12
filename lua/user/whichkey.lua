@@ -161,7 +161,7 @@ local leaderMappings = {
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     m = { "<cmd>Telescope marks<cr>", "Marks" },
     M = { "<cmd>Telescope man_pages<cr>", "Man pages" },
-    n = { "<cmd>lua require('telescope.builtin').git_files({cwd = '~/notebook'})<cr>",
+    n = { "<cmd>lua require('telescope.builtin').live_grep({cwd = '~/notebook'})<cr>",
           "Notebook" },
     l = { "<cmd>Telescope resume<cr>", "Resume last search" },
     p = { "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
