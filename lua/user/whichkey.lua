@@ -122,10 +122,6 @@ local mappings = {
       "<cmd>Telescope diagnostics bufnr=0<cr>",
       "Document diagnostics",
     },
-    w = {
-      "<cmd>Telescope diagnostics<cr>",
-      "Workspace diagnostics",
-    },
     f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     I = { "<cmd>LspInstallInfo<cr>", "Installer info" },
@@ -144,6 +140,10 @@ local mappings = {
     S = {
       "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
       "Workspace symbols",
+    },
+    w = {
+      "<cmd>Telescope diagnostics<cr>",
+      "Workspace diagnostics",
     },
   },
   ["p"] = { ":let @+=@%<CR>", "Yank path" },
