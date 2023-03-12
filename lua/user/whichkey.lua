@@ -77,9 +77,12 @@ local opts = {
   noremap = true, -- use `noremap` when creating keymaps
   nowait = true, -- use `nowait` when creating keymaps
 }
-
 local mappings = {
   [" "] = { "<cmd>lua require 'telescope.builtin'.buffers()<cr>", "Buffers" },
+  ["/"] = {
+    "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+    "Find in buffer",
+  },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
