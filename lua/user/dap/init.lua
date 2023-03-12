@@ -2,7 +2,6 @@ require("user.dap.handlers").setup()
 
 local dap_ui_ok, ui = pcall(require, "dapui")
 if not dap_ui_ok then
-  require("notify")("dap-ui not installed!", "warning")
   return
 end
 
