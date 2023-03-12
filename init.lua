@@ -1,4 +1,5 @@
 require "user.options"
+require "user.whichkey"
 require "user.keymaps"
 require "user.plugins"
 require "user.colorscheme"
@@ -18,7 +19,6 @@ require "user.toggleterm"
 -- require "user.impatient"
 -- require "user.indentline"
 -- require "user.alpha"
-require "user.whichkey"
 require "user.autocommands"
 
 --vim.lsp.set_log_level("debug")

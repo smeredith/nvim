@@ -21,7 +21,6 @@ telescope.setup {
 pcall(require('telescope').load_extension, 'fzf')
 
 -- See `:help telescope.builtin`
-vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
 vim.keymap.set('n', '<leader>/', function()
   -- You can pass additional configuration to telescope to change theme, layout, etc.
@@ -31,9 +30,42 @@ vim.keymap.set('n', '<leader>/', function()
   })
 end, { desc = '[/] Fuzzily search in current buffer' })
 
-vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
-vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
-vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
-vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
-vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
+-- vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
+
+local whichkey = require "which-key"
+
+local keymap = {
+
+    s = {
+        name = "Search",
+        b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+        c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
+        C = { "<cmd>Telescope commands<cr>", "Commands" },
+        d = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
+        f = { "<cmd>Telescope find_files<cr>", "Find File" },
+        h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
+        H = { "<cmd>Telescope highlights<cr>", "Find highlight groups" },
+        k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
+        m = { "<cmd>Telescope marks<cr>", "Marks" },
+        M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
+        l = { "<cmd>Telescope resume<cr>", "Resume last search" },
+        p = {
+          "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
+          "Colorscheme with Preview",
+        },
+        r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+        R = { "<cmd>Telescope registers<cr>", "Registers" },
+        t = { "<cmd>Telescope live_grep<cr>", "Text" },
+        w = { "<cmd>Telescope grep_string<cr>", "Word under Cursor" },
+      },
+}
+
+whichkey.register(keymap, {
+    mode = "n",
+    prefix = "<leader>",
+    buffer = nil,
+    silent = true,
+    noremap = true,
+    nowait = false,
+})
 
