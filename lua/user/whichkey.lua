@@ -77,7 +77,7 @@ local leaderOptions = {
   noremap = true, -- use `noremap` when creating keymaps
   nowait = true, -- use `nowait` when creating keymaps
 }
-local mappings = {
+local leaderMappings = {
   [" "] = { "<cmd>lua require 'telescope.builtin'.buffers()<cr>", "Buffers" },
   ["/"] = {
     "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown{previewer = false})<cr>",
@@ -182,4 +182,4 @@ local mappings = {
 }
 
 which_key.setup(setup)
-which_key.register(mappings, leaderOptions)
+which_key.register(leaderMappings, leaderOptions)
