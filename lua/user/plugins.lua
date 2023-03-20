@@ -50,6 +50,7 @@ return packer.startup(function(use)
     use { "kyazdani42/nvim-web-devicons" }
     use { "kyazdani42/nvim-tree.lua" }
     use { "akinsho/toggleterm.nvim" }
+    use { "simrat39/symbols-outline.nvim" }
 
     -- Colorschemes
     use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out

@@ -19,7 +19,7 @@ function M.setup()
     end,
     cwd = '${workspaceFolder}',
     stopOnEntry = false,
-    args = {'-v', '<Correct tuples are re selected after parameter action runs on select>'},
+    args = {'-v', 'DesktopLazyConnectionsTest::testExtractDashboardDrop527299'},
 
     -- 💀
     -- if you change `runInTerminal` to true, you might need to change the yama/ptrace_scope setting:

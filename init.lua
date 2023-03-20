@@ -20,5 +20,6 @@ require "user.toggleterm"
 -- require "user.indentline"
 -- require "user.alpha"
 require "user.autocommands"
+require "user.symbols-outline"
 
 --vim.lsp.set_log_level("debug")
