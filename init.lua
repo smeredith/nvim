@@ -14,7 +14,7 @@ require "user.nvim-tree"
 -- require "user.lualine"
 require "user.toggleterm"
 -- require "user.project"
--- require "user.indentline"
+require "user.indentblankline"
 require "user.autocommands"
 require "user.symbols-outline"
 

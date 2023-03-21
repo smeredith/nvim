@@ -66,8 +66,8 @@ return packer.startup(function(use)
     use "saadparwaiz1/cmp_luasnip"
     use "hrsh7th/cmp-nvim-lsp"
     use { "L3MON4D3/LuaSnip"} --snippet engine required for LSP
-    use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-
+    use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
+    use { "lukas-reineke/indent-blankline.nvim" }
     -- LSP
     use { "neovim/nvim-lspconfig"} -- enable LSP
     use { "williamboman/mason.nvim"} -- simple to use language server installer
