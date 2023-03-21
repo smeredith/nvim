@@ -1,4 +1,5 @@
 require("user.dap.handlers").setup()
+require "user.dap.persistent-breakpoints"
 
 local dap_ui_ok, ui = pcall(require, "dapui")
 if not dap_ui_ok then
