@@ -145,7 +145,6 @@ local leaderMappings = {
       "Workspace diagnostics",
     },
   },
-  ["p"] = { ":let @+=@%<CR>", "Yank path" },
   s = {
     name = "Search",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
@@ -183,6 +182,13 @@ local leaderMappings = {
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
   ["w"] = { "<cmd>set wrap!<CR>", "Toggle wrap" },
+  y = {
+    name = "Yank",
+    f = { ":let @+=expand('%:t')<CR>", "Yank just filename to +" },
+    p = { ":let @+=expand('%:p:h')<CR>", "Yank just path to +" },
+    q = { ":let @+=@%<CR>", "Yank full path and filename to +" },
+
+  },
 }
 
 which_key.setup(setup)
