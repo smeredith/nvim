@@ -191,7 +191,8 @@ local leaderMappings = {
     name = "Yank",
     f = { ":let @+=expand('%:t')<CR>", "Yank just filename to +" },
     p = { ":let @+=expand('%:p:h')<CR>", "Yank just path to +" },
-    q = { ":let @+=@%<CR>", "Yank full path and filename to +" },
+    q = { ":let @+=expand('%:p')<CR>", "Yank full path and filename to +" },
+    r = { ":let @+=@%<CR>", "Yank relative path and filename to +" },
 
   },
 }
