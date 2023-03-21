@@ -145,6 +145,11 @@ local leaderMappings = {
       "Workspace diagnostics",
     },
   },
+  p = {
+    name = "p4",
+    e = { "<cmd>!p4 edit %<cr>", "p4 edit" },
+    r = { "<cmd>!p4 revert %<cr>", "p4 edit" },
+  },
   s = {
     name = "Search",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
