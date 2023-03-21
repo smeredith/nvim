@@ -79,14 +79,8 @@ local leaderOptions = {
 }
 local leaderMappings = {
   [" "] = { "<cmd>lua require 'telescope.builtin'.buffers()<cr>", "Buffers" },
-  ["/"] = {
-    "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Find in buffer",
-  },
-  ["b"] = {
-    "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Buffers",
-  },
+  ["/"] = { "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find in buffer", },
+  ["b"] = { "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Buffers", },
   ["c"] = { "<cmd>bdelete!<CR>", "Close Buffer" },
   d = {
     name = "Debug",
@@ -113,10 +107,7 @@ local leaderMappings = {
     x = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" },
   },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-  ["f"] = {
-    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Find files",
-  },
+  ["f"] = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find files", },
   g = {
     name = "Git",
     j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next hunk" },
@@ -126,48 +117,27 @@ local leaderMappings = {
     r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset hunk" },
     R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset buffer" },
     s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage hunk" },
-    u = {
-      "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
-      "Undo stage hunk",
-    },
+    u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo stage hunk", },
     o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-    d = {
-      "<cmd>Gitsigns diffthis HEAD<cr>",
-      "Diff",
-    },
+    d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff", },
   },
   ["h"] = { "<cmd>nohlsearch<CR>", "No highlight" },
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code action" },
-    d = {
-      "<cmd>Telescope diagnostics bufnr=0<cr>",
-      "Document diagnostics",
-    },
+    d = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document diagnostics", },
     f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
-    j = {
-      "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
-      "Next diagnostic",
-    },
-    k = {
-      "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
-      "Prev diagnostic",
-    },
+    j = { "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", "Next diagnostic", },
+    k = { "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>", "Prev diagnostic", },
     l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens action" },
     q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
     r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document symbols" },
-    S = {
-      "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-      "Workspace symbols",
-    },
-    w = {
-      "<cmd>Telescope diagnostics<cr>",
-      "Workspace diagnostics",
-    },
+    S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace symbols", },
+    w = { "<cmd>Telescope diagnostics<cr>", "Workspace diagnostics", },
   },
   p = {
     name = "p4",
@@ -182,22 +152,18 @@ local leaderMappings = {
     d = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
     f = { "<cmd>Telescope find_files<cr>", "Find file" },
     g = { "<cmd>Telescope live_grep<cr>", "Live grep" },
-    G = { "<cmd>lua require('telescope.builtin').grep_string({search = vim.fn.input('Rg> ')})<cr>",
-          "Grep" },
+    G = { "<cmd>lua require('telescope.builtin').grep_string({search = vim.fn.input('Rg> ')})<cr>", "Grep" },
     h = { "<cmd>Telescope help_tags<cr>", "Find help" },
     H = { "<cmd>Telescope highlights<cr>", "Find highlight groups" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     m = { "<cmd>Telescope marks<cr>", "Marks" },
     M = { "<cmd>Telescope man_pages<cr>", "Man pages" },
-    n = { "<cmd>lua require('telescope.builtin').live_grep({cwd = '~/notebook'})<cr>",
-          "Notebook" },
+    n = { "<cmd>lua require('telescope.builtin').live_grep({cwd = '~/notebook'})<cr>", "Notebook" },
     l = { "<cmd>Telescope resume<cr>", "Resume last search" },
-    p = { "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
-          "Colorscheme with Preview", },
+    p = { "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>", "Colorscheme with Preview", },
     r = { "<cmd>Telescope oldfiles<cr>", "Open recent file" },
     R = { "<cmd>Telescope registers<cr>", "Registers" },
-    v = { "<cmd>lua require('telescope.builtin').find_files({cwd = '~/.config/nvim'})<cr>",
-          "Nvim config files" },
+    v = { "<cmd>lua require('telescope.builtin').find_files({cwd = '~/.config/nvim'})<cr>", "Nvim config files" },
     w = { "<cmd>Telescope grep_string<cr>", "Word under cursor" },
   },
   t = {
@@ -217,7 +183,6 @@ local leaderMappings = {
     p = { ":let @+=expand('%:p:h')<CR>", "Yank just path to +" },
     q = { ":let @+=expand('%:p')<CR>", "Yank full path and filename to +" },
     r = { ":let @+=@%<CR>", "Yank relative path and filename to +" },
-
   },
 }
 
