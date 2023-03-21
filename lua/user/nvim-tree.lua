@@ -16,7 +16,7 @@ local function grep_in(node)
   if not node then
     return
   end
-  local path = node.absolute_path or uv.cwd()
+  local path = node.absolute_path
   if node.type ~= 'directory' and node.parent then
     path = node.parent.absolute_path
   end
