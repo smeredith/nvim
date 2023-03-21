@@ -29,7 +29,6 @@ function M.setup()
   configure() -- Configuration
   configure_exts() -- Extensions
   configure_debuggers() -- Debugger
-  require("user.dap.keymaps").setup() -- Keymaps
 end
 
 return M
