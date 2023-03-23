@@ -53,8 +53,10 @@ return packer.startup(function(use)
     use { "simrat39/symbols-outline.nvim" }
 
     -- Colorschemes
-    use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
     use "jeffkreeftmeijer/vim-dim"
+    use 'folke/tokyonight.nvim'
+    use "shaunsingh/solarized.nvim"
+    use "ellisonleao/gruvbox.nvim"
 
     -- cmp
     use "hrsh7th/nvim-cmp"
