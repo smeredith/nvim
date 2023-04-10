@@ -141,8 +141,9 @@ local leaderMappings = {
   },
   p = {
     name = "p4",
+    d = { "<cmd>!p4 delete %<cr>", "p4 delete" },
     e = { "<cmd>!p4 edit %<cr>", "p4 edit" },
-    r = { "<cmd>!p4 revert %<cr>", "p4 edit" },
+    r = { "<cmd>!p4 revert %<cr>", "p4 revert" },
   },
   s = {
     name = "Search",

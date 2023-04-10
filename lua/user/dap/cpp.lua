@@ -6,8 +6,11 @@ function M.setup()
   dap.adapters.lldb = {
     type = 'executable',
     command = '/home/tsi/smeredith/tableau-cache/devtools/clang/9.0.1.c2543473.r1cf2d5de/bin/lldb-vscode',
-    name = 'lldb'
-  }
+    name = 'lldb',
+    options = {
+          initialize_timeout_sec = 240,
+        }
+    }
 
   dap.configurations.cpp = {
   {
@@ -19,7 +22,7 @@ function M.setup()
     end,
     cwd = '${workspaceFolder}',
     stopOnEntry = false,
-    args = {'-v', 'DesktopLazyConnectionsTest::testExtractDashboardDrop527299'},
+    args = {'-v', 'LimitDomainProcessCalls::testDomainprocessCountOnRemoveDomainRefreshInShowFilter'},
 
     -- 💀
     -- if you change `runInTerminal` to true, you might need to change the yama/ptrace_scope setting:
