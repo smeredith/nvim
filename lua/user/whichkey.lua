@@ -79,7 +79,7 @@ local leaderOptions = {
 }
 local leaderMappings = {
   ["c"] = { "<cmd>bdelete!<CR>", "Close Buffer" },
-  ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+--  ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No highlight" },
   s = {
     name = "Search",
