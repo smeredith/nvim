@@ -42,16 +42,17 @@ packer.init({
 return packer.startup(function(use)
     -- Basic stuff
     use { "wbthomason/packer.nvim" } -- Have packer manage itself
-    use "shaunsingh/solarized.nvim"
+    use { "shaunsingh/solarized.nvim" }
     use { "folke/which-key.nvim" }
     use { "kyazdani42/nvim-web-devicons" }
+
+--    use { "kyazdani42/nvim-tree.lua" }
 
 --    use { "nvim-telescope/telescope.nvim", tag = "0.1.1", requires = { {"nvim-lua/plenary.nvim"} } }
 --    use { "nvim-telescope/telescope-file-browser.nvim", requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" } }
 --    use { "lewis6991/gitsigns.nvim" }
 --    use { "numToStr/Comment.nvim" }
 --    use { "JoosepAlviste/nvim-ts-context-commentstring" }
---    use { "kyazdani42/nvim-tree.lua" }
 --    use { "akinsho/toggleterm.nvim" }
 --    use { "simrat39/symbols-outline.nvim" }
 
