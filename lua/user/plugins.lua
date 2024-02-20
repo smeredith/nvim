@@ -40,50 +40,52 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
+    -- Basic stuff
     use { "wbthomason/packer.nvim" } -- Have packer manage itself
-    use { "nvim-telescope/telescope.nvim", tag = "0.1.1", requires = { {"nvim-lua/plenary.nvim"} } }
-    use { "nvim-telescope/telescope-file-browser.nvim", requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" } }
+    use "shaunsingh/solarized.nvim"
     use { "folke/which-key.nvim" }
-    use { "lewis6991/gitsigns.nvim" }
-    use { "numToStr/Comment.nvim" }
-    use { "JoosepAlviste/nvim-ts-context-commentstring" }
     use { "kyazdani42/nvim-web-devicons" }
-    use { "kyazdani42/nvim-tree.lua" }
-    use { "akinsho/toggleterm.nvim" }
-    use { "simrat39/symbols-outline.nvim" }
+
+--    use { "nvim-telescope/telescope.nvim", tag = "0.1.1", requires = { {"nvim-lua/plenary.nvim"} } }
+--    use { "nvim-telescope/telescope-file-browser.nvim", requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" } }
+--    use { "lewis6991/gitsigns.nvim" }
+--    use { "numToStr/Comment.nvim" }
+--    use { "JoosepAlviste/nvim-ts-context-commentstring" }
+--    use { "kyazdani42/nvim-tree.lua" }
+--    use { "akinsho/toggleterm.nvim" }
+--    use { "simrat39/symbols-outline.nvim" }
 
     -- Colorschemes
-    use "jeffkreeftmeijer/vim-dim"
-    use 'folke/tokyonight.nvim'
-    use "shaunsingh/solarized.nvim"
-    use "ellisonleao/gruvbox.nvim"
+--    use "jeffkreeftmeijer/vim-dim"
+--    use 'folke/tokyonight.nvim'
+--    use "ellisonleao/gruvbox.nvim"
 
     -- cmp
-    use "hrsh7th/nvim-cmp"
-    use "hrsh7th/cmp-buffer"
-    use "hrsh7th/cmp-path"
-    use "hrsh7th/cmp-cmdline"
-    use "hrsh7th/cmp-nvim-lua"
-    use "saadparwaiz1/cmp_luasnip"
-    use "hrsh7th/cmp-nvim-lsp"
-    use { "L3MON4D3/LuaSnip"} --snippet engine required for LSP
-    use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
-    use { "lukas-reineke/indent-blankline.nvim" }
+--    use "hrsh7th/nvim-cmp"
+--    use "hrsh7th/cmp-buffer"
+--    use "hrsh7th/cmp-path"
+--    use "hrsh7th/cmp-cmdline"
+--    use "hrsh7th/cmp-nvim-lua"
+--    use "saadparwaiz1/cmp_luasnip"
+--    use "hrsh7th/cmp-nvim-lsp"
+--    use { "L3MON4D3/LuaSnip"} --snippet engine required for LSP
+--    use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
+--    use { "lukas-reineke/indent-blankline.nvim" }
     -- LSP
-    use { "neovim/nvim-lspconfig"} -- enable LSP
-    use { "williamboman/mason.nvim"} -- simple to use language server installer
-    use { "williamboman/mason-lspconfig.nvim"}
-    use { "jose-elias-alvarez/null-ls.nvim"} -- for formatters and linters
-    use { "RRethy/vim-illuminate"}
+--    use { "neovim/nvim-lspconfig"} -- enable LSP
+--    use { "williamboman/mason.nvim"} -- simple to use language server installer
+--    use { "williamboman/mason-lspconfig.nvim"}
+--    use { "jose-elias-alvarez/null-ls.nvim"} -- for formatters and linters
+--    use { "RRethy/vim-illuminate"}
 
     -- Treesitter
-    use { "nvim-treesitter/nvim-treesitter" }
+--    use { "nvim-treesitter/nvim-treesitter" }
 
     -- Debugging
-    use { "mfussenegger/nvim-dap" }
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-    use { "theHamsta/nvim-dap-virtual-text" }
-    use { "Weissle/persistent-breakpoints.nvim"}
+--    use { "mfussenegger/nvim-dap" }
+--    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+--    use { "theHamsta/nvim-dap-virtual-text" }
+--    use { "Weissle/persistent-breakpoints.nvim"}
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
