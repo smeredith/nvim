@@ -53,7 +53,6 @@ return packer.startup(function(use)
 --    use { "numToStr/Comment.nvim" }
 --    use { "JoosepAlviste/nvim-ts-context-commentstring" }
 --    use { "akinsho/toggleterm.nvim" }
---    use { "simrat39/symbols-outline.nvim" }
 
     -- Colorschemes
 --    use "jeffkreeftmeijer/vim-dim"
@@ -77,6 +76,7 @@ return packer.startup(function(use)
 --    use { "williamboman/mason-lspconfig.nvim"}
 --    use { "jose-elias-alvarez/null-ls.nvim"} -- for formatters and linters
 --    use { "RRethy/vim-illuminate"}
+--    use { "simrat39/symbols-outline.nvim" }
 
     -- Treesitter
 --    use { "nvim-treesitter/nvim-treesitter" }
