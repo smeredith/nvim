@@ -6,3 +6,6 @@ For symbols, download and install Hack Nerd Font from https://www.nerdfonts.com/
 sudo apt-get install ripgrep
 
 see https://github.com/smeredith/dotfiles/blob/master/.config/tmux/tmux.conf
+
+Install Neovim: https://github.com/neovim/neovim/blob/master/INSTALL.md#linux
+
