@@ -48,6 +48,7 @@ return packer.startup(function(use)
     use { "nvim-telescope/telescope.nvim", requires = { {"nvim-lua/plenary.nvim"} } }
     use { "nvim-telescope/telescope-file-browser.nvim", requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" } }
     use { "kyazdani42/nvim-tree.lua" }
+    use { "nvim-treesitter/nvim-treesitter" }
 
 --    use { "lewis6991/gitsigns.nvim" }
 --    use { "numToStr/Comment.nvim" }
@@ -78,8 +79,6 @@ return packer.startup(function(use)
 --    use { "RRethy/vim-illuminate"}
 --    use { "simrat39/symbols-outline.nvim" }
 
-    -- Treesitter
---    use { "nvim-treesitter/nvim-treesitter" }
 
     -- Debugging
 --    use { "mfussenegger/nvim-dap" }
