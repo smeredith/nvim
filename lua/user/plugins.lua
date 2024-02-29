@@ -66,10 +66,12 @@ return packer.startup(function(use)
 --    use { "L3MON4D3/LuaSnip"} --snippet engine required for LSP
 --    use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
 --    use { "lukas-reineke/indent-blankline.nvim" }
+
     -- LSP
---    use { "neovim/nvim-lspconfig"} -- enable LSP
---    use { "williamboman/mason.nvim"} -- simple to use language server installer
---    use { "williamboman/mason-lspconfig.nvim"}
+    use { "williamboman/mason.nvim"} -- simple to use language server installer
+    use { "williamboman/mason-lspconfig.nvim"}
+    use { "neovim/nvim-lspconfig"} -- enable LSP
+
 --    use { "RRethy/vim-illuminate"}
 --    use { "simrat39/symbols-outline.nvim" }
 
