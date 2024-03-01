@@ -62,7 +62,7 @@ M.on_attach = function(client, bufnr)
 --     end
 --
     if client.name == "lua_ls" then
-        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentFormattingProvider = true
     end
     if client.name == "clangd" then
         client.server_capabilities.documentFormattingProvider = true
