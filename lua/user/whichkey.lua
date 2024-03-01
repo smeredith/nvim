@@ -116,6 +116,7 @@ local leaderMappings = {
     p = { "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>", "Colorscheme with Preview", },
     r = { "<cmd>Telescope oldfiles<cr>", "Open recent file" },
     R = { "<cmd>Telescope registers<cr>", "Registers" },
+    u = { "<cmd>Telescope undo<cr>", "Undo tree" },
     v = { "<cmd>lua require('telescope.builtin').find_files({cwd = '~/.config/nvim'})<cr>", "Nvim config files" },
     w = { "<cmd>Telescope grep_string<cr>", "Word under cursor" },
   },

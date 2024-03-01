@@ -29,9 +29,17 @@ telescope.setup {
         prompt_position = 'top',
       }
     },
+    undo = {
+      mappings = {
+        i = {
+          ["<cr>"] = require("telescope-undo.actions").restore,
+        },
+      },
+    },
   },
 }
 
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 pcall(require('telescope').load_extension, 'file_browser')
+pcall(require('telescope').load_extension, 'undo')
