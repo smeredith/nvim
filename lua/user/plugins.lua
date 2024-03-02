@@ -50,6 +50,7 @@ return packer.startup(function(use)
     use { "debugloop/telescope-undo.nvim", requires = {"nvim-telescope/telescope.nvim" } }
     use { "kyazdani42/nvim-tree.lua" }
     use { "nvim-treesitter/nvim-treesitter" }
+    use { "HiPhish/rainbow-delimiters.nvim" }
 
 --    use { "lewis6991/gitsigns.nvim" }
 --    use { "numToStr/Comment.nvim" }
